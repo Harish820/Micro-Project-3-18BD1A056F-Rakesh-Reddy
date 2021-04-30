@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>CovidMeterIndia</title>
+<meta charset="utf-8";
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="style1.css">
+<style>
+div {
+  margin:0 0 50px;
+}
+</style>
+</head>
+<body>
+<div class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-light-grey w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="/create" class="w3-bar-item w3-button">Add Info</a>
+  <a href="/updateinfo" class="w3-bar-item w3-button">Update Info</a>
+  <a href="/deleteinfo" class="w3-bar-item w3-button">Delete Info</a>
+</div>
+
+<div id="main">
+
+<div class="w3-teal">
+  
+  <div class="w3-container w3-padding-24 w3-center">
+    <h1>Covid-19 Updates(INDIA)</h1>
+  </div>
+</div>
+<div class="w3-container">
+<center>
+    <table>
+        <tr>
+            <th>S.no</th>
+            <th>State Name</th>
+            <th>Total Active Cases</th>
+            <th>New Cases</th>
+            <th>Total Recovered</th>
+            <th>New Recovered</th>
+	    <th>Total Deaths</th>
+	    <th>New Deaths</th>
+        </tr>
+    
+        <% for(var i=0;i<data.length;i++){%>
+        <tr>
+            <td><%= data[i].Sid %></td>
+            <td><%= data[i].StateName %></td>
+            <td><%= data[i].TotalActive %></td>
+            <td><%= data[i].NewActive %></td>
+            <td><%= data[i].TotalRecovery %></td>
+            <td><%= data[i].NewRecovery %></td>
+	    <td><%= data[i].TotalDeath %></td>
+            <td><%= data[i].NewDeaths %></td>
+        </tr>
+        <% } %>
+    
+        </table>
+</center>
+</div>
+<div style="margin:0 0 0 9%">
+<button id="openNav" class="w3-button w3-teal w3-xlarge w3-ripple" onclick="w3_open()">&#9998; Edit</button>
+</div>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "15%";
+  document.getElementById("mySidebar").style.width = "15%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>

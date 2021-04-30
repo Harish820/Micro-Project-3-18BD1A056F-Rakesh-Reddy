@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Data</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+</head>
+<body>
+
+<div class="w3-container w3-teal w3-half w3-center" style="margin:0 0 0 25%">
+  <a href="/" class="w3-button w3-light-grey w3-ripple w3-right w3-quarter w3-margin">Home Page</a>
+  <h2 class="w3-left">Input Form</h2>
+</div>
+
+<div class="w3-row">
+<div class="w3-container w3-quarter"></div>
+<div class="w3-container w3-light-grey w3-half">
+<form class="w3-container w3-light-grey" action="/AddData" method="POST">
+  <p>
+  <label>Sid</label>
+  <input class="w3-input w3-hover-border-grey" placeholder="id" type="number" name="Sid"></p>
+  <p>
+  <label>State Name</label>
+  <input class="w3-input w3-hover-border-grey" placeholder="Telangana"  type="text" name="StateName"></p>
+  <p>
+  <label>Total Active Cases</label>
+  <input class="w3-input w3-hover-border-grey" placeholder="0"  type="number" name="TotalActive"></p>
+  <p>
+  <label>New Cases</label>
+  <input class="w3-input w3-hover-border-grey" placeholder="0"  type="number" name="NewActive"></p>
+  <p>
+  <label>Total Recovered cases</label>
+  <input class="w3-input w3-hover-border-grey" placeholder="0"  type="number" name="TotalRecovery"></p>
+  <p>
+  <label>New Recovered cases</label>
+  <input class="w3-input w3-hover-border-grey" placeholder="0"  type="number" name="NewRecovery"></p>
+  <p>
+  <label>Total Deaths</label>
+  <input class="w3-input w3-hover-border-grey" placeholder="0"  type="number" name="TotalDeath"></p>
+  <p>
+  <label>New Deaths</label>
+  <input class="w3-input w3-hover-border-grey" placeholder="0"  type="number" name="NewDeaths"></p>
+  <p>
+  <label>click on submit if data entered is correct</label>
+  <button class="w3-btn w3-teal">Add Data</button></p>
+</form>
+</div>
+<div class="w3-container w3-quarter"></div>
+</div>
+
+</body>
+</html> 
